@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true
         },
         phone: {
-            type: DataTypes.PHONE,    //!  CHECK
+            type: DataTypes.STRING(15),    //? 15 digit max to allow for international phone numbers
             allowNull: true
         },
         password: {
@@ -33,11 +33,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         dob: {
-            type: DataTypes.DATE,  //! CHECK
+            type: DataTypes.DATEONLY,  //! CHECK
             allowNull: false
         },
         dod: {
-            type: DataTypes.DATE,  //! CHECK
+            type: DataTypes.DATEONLY,  //! CHECK
             allowNull: true
         },
         birthPlace: {
@@ -53,15 +53,15 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         about: {
-            type: DataTypes.STRING,  //!  CHECK - large text field
+            type: DataTypes.TEXT,  //!  CHECK - large text field
             allowNull: false
         },
         interest: {
-            type: DataTypes.STRING,  //!  CHECK - list... large text field
+            type: DataTypes.TEXT,  //!  CHECK - list... large text field
             allowNull: false
         },
         profilePic: {
-            type: DataTypes.STRING,
+            type: DataTypes.BLOB('long'),
             allowNull: false
         }
 

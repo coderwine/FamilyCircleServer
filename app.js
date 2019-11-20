@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
-const user = require('');
+const user = require('./Controller/userController');
 
 const sequelize = require('./db');
 
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(require('./Middleware/headers'))
 
 app.use('/user', user);
-app.use('/', infohere);
+// app.use('/', infohere);
 
 
 
