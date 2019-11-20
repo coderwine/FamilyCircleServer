@@ -1,0 +1,22 @@
+{
+  "name": "family-circle-server",
+  "version": "1.0.0",
+  "description": "connecting families and only families",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Winebrenner",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.13.0",
+    "sequelize": "^5.21.2"
+  }
+}
