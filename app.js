@@ -1,19 +1,19 @@
 require('dotenv').config();
 
+const sequelize = require('./db');
 const express = require('express');
 const app = express();
-const user = require('./Controller/userController');
+const User = require('./Controller/userController');
 
-const sequelize = require('./db');
 
 //!{force.true} clears the table for restructure if needed.
 sequelize.sync();
 app.use(express.json());
 
 // in order to use the app, it seeks out the headers to validate the response that it is seeking.
-app.use(require('./Middleware/headers'))
+app.use(require('./Middleware/headers'));
 
-app.use('/user', user);
+app.use('/user', User);
 // app.use('/', infohere);
 
 
